@@ -12,6 +12,11 @@ client = genai.Client()
 
 st.set_page_config(page_title="Agente do Futuro", layout="centered")
 st.title("📑 Agente do Futuro - Análise Fiscal")
+st.write("""
+        Este projeto utiliza a API Gemini do Google para realizar análises fiscais automatizadas de dados extraídos de arquivos CSV contendo informações de Notas Fiscais eletrônicas (NF-e).
+        
+        O objetivo do sistema é avaliar a coerência fiscal de produtos e operações com base em campos como CFOP, NCM/SH e Natureza da Operação.
+        """)
 
 uploaded_file = st.file_uploader("Carregue o arquivo CSV", type=["csv"])
 if uploaded_file:
